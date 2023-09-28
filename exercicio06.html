@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando o DOM (Denovo)</title>
+    <style>
+        div#divertido{
+            font: bold 18pt georgia;
+            background: rgb(1, 32, 1);
+            color: rgb(133, 10, 248);
+            width: 241px;
+            height: 241px;
+            line-height: 241px; /* Deixa o texto alinhado ao meio */
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="divertido">
+        pode mexer...
+    </div> 
+
+    <script>
+        var divv = document.getElementById('divertido') // essa var divv é um elemento criado para fazer a ligação com o ID do HTML ( Geralmente a variavel nao fica fora, mas estamos ainda em fase de aprendizado)
+        divv.addEventListener('click',clicar) // quando o mouse for clicado
+        divv.addEventListener('mouseenter', entrar) // quando o mouse passsar sobre o elemento
+        divv.addEventListener('mouseout', saiu) // quando o mouse sair do elemento
+        
+        function clicar() {  // essa function vai ser ativada quando o mouse for clicado
+            divv.innerText = 'Funfou U.U' // esse é o comando do que ira aparecer na tela quando o mouse for clicado
+            divv.style.color = 'blue' // muda a cor da fonte
+        }
+        function entrar() {
+            divv.innerText = "Entrei ;)"
+            divv.style.background = 'aquamarine'
+        }
+        function saiu() {
+            divv.innerText = "Saiu ;("
+            divv.style.background = 'darkgreen'
+        }
+    </script>
+</body>
+</html>
